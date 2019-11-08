@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <characters 
+      <films 
       v-for='(id, index) in initial_ids'
       :key='index'
       :id='id'
@@ -12,29 +12,31 @@
 </template>
 
 <script>
-import Characters from './components/Characters.vue'
+import Films from './components/Films.vue'
 export default {
   name: 'app',
   components: {
-    Characters
+    Films
   },
   data(){
     return{
-      title: 'Generate your Team',
-      initial_ids : [1, 13, 14]
-      
+      title: 'Get Your Favorite Starwars Film',
+      initial_ids : [1, 3, 4] 
     }
   }
 }
 </script>
 
 <style>
+body{
+  background-color: #2c3e50;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: antiquewhite;
   margin-top: 60px;
 }
 </style>
